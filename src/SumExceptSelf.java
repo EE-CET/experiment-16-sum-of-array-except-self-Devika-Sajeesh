@@ -1,8 +1,26 @@
-public class SumExceptSelf {
-   
-        // TODO: Read n
-        // TODO: Read array elements
-        // TODO: Calculate sum of all elements (Total Sum)
-        // TODO: For each element, print (Total Sum - element)
-    
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] nums = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            nums[i] = sc.nextInt();
+        }
+
+        int totalSum = 0;
+        for (int i = 0; i < n; i++) {
+            totalSum += nums[i];
+        }
+
+        // Compute result
+        for (int i = 0; i < n; i++) {
+            System.out.print((totalSum - nums[i]) + " ");
+        }
+
+        sc.close();
+    }
 }
